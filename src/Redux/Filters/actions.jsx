@@ -13,8 +13,6 @@ export const colorchanged = (color, changeType) => {
 export const statuschanged = (status) => {
   return {
     type: STATUSCHANGED,
-    payload: {
-      status,
-    },
+    payload: status,
   };
 };

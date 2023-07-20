@@ -1,17 +1,14 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
+import { Provider } from "react-redux";
 import "./App.css";
 import Navbar from "./Components/Navbar/Navbar";
 import Header from "./Components/Header/Header";
 import TodoList from "./Components/TodoList/TodoList";
 import Footer from "./Components/Footer/Footer";
+import store from "./Redux/store";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
+    <Provider store={store}>
       <div className="grid place-items-center bg-blue-100 h-screen px-6 font-sans">
         {/* <!-- navbar --> */}
         <Navbar />
@@ -30,7 +27,7 @@ function App() {
           <Footer />
         </div>
       </div>
-    </>
+    </Provider>
   );
 }
 
