@@ -6,7 +6,7 @@ const reducer = (state = initialStace, action) => {
     case STATUSCHANGED:
       return {
         ...state,
-        statue: action.payload,
+        status: action.payload,
       };
     case COLORCHANGED:
       const { color, changeType } = action.payload;
